@@ -37,7 +37,7 @@ export default function Hero() {
           <div className="flex justify-center">
             <div className="w-48 h-48 md:w-56 md:h-56 bg-dark-surface rounded-full border border-dark-border flex items-center justify-center overflow-hidden">
               <img
-                src="/profile.jpg"
+                src="/yash.png"
                 alt="Yash Raj"
                 className="w-full h-full object-cover"
               />
