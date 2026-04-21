@@ -9,17 +9,17 @@ export default function Contact() {
     {
       name: 'GitHub',
       icon: <GitHubIcon />,
-      url: '#', // User to update with actual GitHub URL
+      url: 'https://github.com/Yash-Raj-5424',
     },
     {
       name: 'Twitter',
       icon: '𝕏',
-      url: '#', // User to update with actual Twitter URL
+      url: 'https://x.com/yash_mish91',
     },
     {
       name: 'Email',
       icon: <MailIcon />,
-      url: '#', // User to update with actual email address
+      url: 'mailto:yashraj31706@gmail.com',
     },
   ];
 
