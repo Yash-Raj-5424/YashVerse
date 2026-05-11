@@ -3,6 +3,7 @@
 import Container from './Container';
 import GitHubIcon from './GitHubIcon';
 import MailIcon from './MailIcon';
+import LinkedInIcon from './LinkedInIcon';
 
 interface SocialIcon {
   name: string;
@@ -23,6 +24,11 @@ export default function Hero() {
       url: '#', // User to update with actual Twitter profile
     },
     {
+      name: 'LinkedIn',
+      icon: <LinkedInIcon />,
+      url: '#', // User to update with actual LinkedIn profile
+    },
+    {
       name: 'Email',
       icon: <MailIcon />,
       url: '#', // User to update with actual email
@@ -37,7 +43,7 @@ export default function Hero() {
           <div className="flex justify-center">
             <div className="w-48 h-48 md:w-56 md:h-56 bg-dark-surface rounded-full border border-dark-border flex items-center justify-center overflow-hidden">
               <img
-                src="/yash.png"
+                src="/yash_pfp.png"
                 alt="Yash Raj"
                 className="w-full h-full object-cover"
               />
@@ -47,8 +53,8 @@ export default function Hero() {
           {/* Right: Content */}
           <div className="space-y-6">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold text-dark-text">Yash Raj</h1>
-              <h2 className="text-xl md:text-2xl text-dark-muted mt-2">Backend Engineer</h2>
+              <h1 className="playfair-display text-4xl md:text-5xl font-bold text-dark-text">Yash Raj</h1>
+              <h2 className="playfair-display text-xl md:text-2xl text-dark-muted mt-2">Backend Engineer</h2>
             </div>
 
             <p className="text-sm md:text-base text-dark-muted italic">

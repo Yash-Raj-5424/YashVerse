@@ -3,6 +3,7 @@
 import Container from './Container';
 import GitHubIcon from './GitHubIcon';
 import MailIcon from './MailIcon';
+import LinkedInIcon from './LinkedInIcon';
 
 export default function Contact() {
   const contactIcons = [
@@ -15,6 +16,11 @@ export default function Contact() {
       name: 'Twitter',
       icon: '𝕏',
       url: 'https://x.com/yash_mish91',
+    },
+    {
+      name: 'LinkedIn',
+      icon: <LinkedInIcon />,
+      url: '#', // User to update with actual LinkedIn profile
     },
     {
       name: 'Email',

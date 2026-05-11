@@ -21,8 +21,8 @@ const config: Config = {
         container: '900px',
       },
       fontFamily: {
-        sans: ['Calling Code', 'Courier New', 'monospace'],
-        mono: ['Calling Code', 'Courier New', 'monospace'],
+        sans: ['Space Grotesk', 'Courier New', 'monospace'],
+        mono: ['Space Grotesk', 'Courier New', 'monospace'],
       },
     },
   },
