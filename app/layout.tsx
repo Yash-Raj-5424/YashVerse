@@ -1,12 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Navbar from '@/components/Navbar';
 import './globals.css';
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  charset: 'utf-8',
+};
 
 export const metadata: Metadata = {
   title: 'Yash Raj - Backend Engineer',
   description: 'Backend engineer portfolio. Experienced in distributed systems, microservices, and scalable architecture.',
-  viewport: 'width=device-width, initial-scale=1',
-  charset: 'utf-8',
 };
 
 export default function RootLayout({
