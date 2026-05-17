@@ -20,7 +20,7 @@ export default function Contact() {
     {
       name: 'LinkedIn',
       icon: <LinkedInIcon />,
-      url: '#', // User to update with actual LinkedIn profile
+      url: 'https://linkedin.com/in/yashraj37',
     },
     {
       name: 'Email',

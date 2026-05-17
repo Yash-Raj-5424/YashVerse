@@ -2,8 +2,8 @@
 
 import Container from './Container';
 import GitHubIcon from './GitHubIcon';
-import MailIcon from './MailIcon';
 import LinkedInIcon from './LinkedInIcon';
+import MediumIcon from './MediumIcon';
 
 interface SocialIcon {
   name: string;
@@ -16,22 +16,22 @@ export default function Hero() {
     {
       name: 'GitHub',
       icon: <GitHubIcon />,
-      url: '#', // User to update with actual GitHub profile
+      url: 'https://github.com/Yash-Raj-5424',
     },
     {
       name: 'Twitter',
       icon: '𝕏',
-      url: '#', // User to update with actual Twitter profile
+      url: 'https://x.com/yash_mish91',
     },
     {
       name: 'LinkedIn',
       icon: <LinkedInIcon />,
-      url: '#', // User to update with actual LinkedIn profile
+      url: 'https://linkedin.com/in/yashraj37',
     },
     {
-      name: 'Email',
-      icon: <MailIcon />,
-      url: '#', // User to update with actual email
+      name: 'Medium',
+      icon: <MediumIcon />,
+      url: 'https://medium.com/@yashraj31706',
     },
   ];
 

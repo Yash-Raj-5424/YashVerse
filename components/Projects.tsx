@@ -6,18 +6,18 @@ import ProjectCard from './ProjectCard';
 
 const featuredProjects = [
   {
-    title: 'Distributed Rate Limiter',
-    techStack: ['Redis', 'Spring Boot', 'Java'],
+    title: 'Outbox - Fault Tolerant Payment Processing System',
+    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Flyway'],
     description:
-      'Implemented a distributed rate limiter using Redis with token bucket algorithm. Handles 10K+ concurrent requests per second with <5ms latency per check.',
-    githubUrl: '#', // User to update with actual GitHub URL
+      'Implemented an outbox pattern-based payment processing system ensuring exactly-once delivery semantics. Handles 50K+ transactions daily with automatic retry logic and dead-letter queue.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
   },
   {
-    title: 'Microservices Cache Layer',
-    techStack: ['Redis', 'Kafka', 'Docker', 'Java'],
+    title: 'FluxWard - Distributed API Rate Limiter',
+    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Lua', 'Resilience4j', 'Prometheus'],
     description:
-      'Built an event-driven cache invalidation system for microservices using Kafka topics. Reduces database queries by 70% and ensures <100ms eventual consistency.',
-    githubUrl: '#', // User to update with actual GitHub URL
+      'Implemented a distributed rate limiter using Redis with token bucket algorithm. Handles 10K+ concurrent requests per second with <5ms latency per check.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/FluxWard', // User to update with actual GitHub URL
   },
 ];
 

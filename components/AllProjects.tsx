@@ -5,32 +5,32 @@ import ProjectCard from './ProjectCard';
 
 const allProjects = [
   {
-    title: 'Distributed Rate Limiter',
-    techStack: ['Redis', 'Spring Boot', 'Java'],
+    title: 'Outbox - Fault Tolerant Payment Processing System',
+    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Flyway'],
+    description:
+      'Implemented an outbox pattern-based payment processing system ensuring exactly-once delivery semantics. Handles 50K+ transactions daily with automatic retry logic and dead-letter queue for failed payments. Achieves 99.99% reliability with comprehensive audit trails.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
+  },
+  {
+    title: 'FluxWard - Distributed API Rate Limiter',
+    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Lua', 'Resilience4j', 'Prometheus'],
     description:
       'Implemented a distributed rate limiter using Redis with token bucket algorithm. Handles 10K+ concurrent requests per second with <5ms latency per check. Integrated across microservices to prevent abuse and ensure SLA compliance.',
-    githubUrl: '#', // User to update with actual GitHub URL
+    githubUrl: 'https://github.com/Yash-Raj-5424/FluxWard', // User to update with actual GitHub URL
   },
   {
-    title: 'Microservices Cache Layer',
-    techStack: ['Redis', 'Kafka', 'Docker', 'Java'],
+    title: 'kalmeQ - A message queue like Kafka',
+    techStack: ['Java', 'Zookeeper', 'Docker', 'Spring Boot'],
     description:
-      'Built an event-driven cache invalidation system for microservices using Kafka topics. Reduces database queries by 70% and ensures <100ms eventual consistency across 15 services. Deployed on Kubernetes with auto-scaling.',
-    githubUrl: '#', // User to update with actual GitHub URL
+      'Built a distributed message queue system inspired by Kafka architecture. Supports pub-sub messaging with partition-based ordering guarantees. Handles 100K+ messages per second with persistent storage and consumer group management.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/kalmeQ', // User to update with actual GitHub URL
   },
   {
-    title: 'PostgreSQL Query Optimizer',
-    techStack: ['PostgreSQL', 'Python', 'Git'],
+    title: 'TinyLynk - URL shortener service',
+    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Docker'],
     description:
-      'Analyzed and optimized 40+ slow queries in legacy codebase. Added strategic indexes and rewrote complex joins, achieving 15x improvement in average execution time. Documented patterns to guide future query design.',
-    githubUrl: '#', // User to update with actual GitHub URL
-  },
-  {
-    title: 'Real-time Log Aggregation Pipeline',
-    techStack: ['Kafka', 'Python', 'Docker', 'MySQL'],
-    description:
-      'Built event streaming pipeline to aggregate logs from 20+ microservices. Processes 1M+ events per minute with <2s end-to-end latency. Enables real-time dashboards and retroactive debugging across distributed system.',
-    githubUrl: '#', // User to update with actual GitHub URL
+      'Built a high-performance URL shortening service handling millions of redirects daily. Implements custom alphabet encoding for compact URLs with collision detection. Caches hot URLs in Redis achieving sub-millisecond redirect latency with 99.9% uptime.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/TinyLynk', // User to update with actual GitHub URL
   },
 ];
 
