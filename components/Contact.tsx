@@ -50,9 +50,6 @@ export default function Contact() {
             </a>
           ))}
         </div>
-        <p className="mt-6 text-sm text-dark-muted">
-          Update the href attributes above with your actual social profiles and email address.
-        </p>
       </Container>
     </section>
   );
