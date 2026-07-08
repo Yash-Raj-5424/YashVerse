@@ -1,12 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const router = useRouter();
   const { theme, toggleTheme } = useTheme();
   const isOnHomePage = pathname === '/';
@@ -19,6 +20,9 @@ export default function Navbar() {
     if (!isOnHomePage) {
       router.push('/');
     } else {
+      if (searchParams.get('scroll')) {
+        router.replace('/');
+      }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
@@ -57,7 +61,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-dark-surface border border-dark-border rounded-full shadow-lg shadow-black/10">
+    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-black/30 border border-dark-border rounded-full">
       <div className="px-8 py-3">
         <ul className="flex items-center gap-8">
           <li>

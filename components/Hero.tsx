@@ -41,7 +41,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left: Profile Image */}
           <div className="flex justify-center">
-            <div className="w-48 h-48 md:w-56 md:h-56 bg-dark-surface rounded-full border border-dark-border flex items-center justify-center overflow-hidden">
+            <div className="w-52 aspect-[4/5] md:w-60 md:aspect-[4/5] bg-dark-surface rounded-2xl border border-dark-border flex items-center justify-center overflow-hidden shadow-lg shadow-black/10">
               <img
                 src="/yash_pfp.png"
                 alt="Yash Raj"

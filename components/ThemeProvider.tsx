@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useLayoutEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
 type Theme = 'light' | 'dark';
 
@@ -52,28 +52,41 @@ function applyTheme(theme: Theme) {
 
 const ThemeContext = createContext<ThemeContextValue | null>(null);
 
-function getInitialTheme(): Theme {
+function getStoredTheme(): Theme | null {
   if (typeof window === 'undefined') {
-    return 'dark';
+    return null;
   }
 
   const storedTheme = window.localStorage.getItem('theme');
+
   if (storedTheme === 'light' || storedTheme === 'dark') {
     return storedTheme;
   }
 
-  const themeAttribute = document.documentElement.dataset.theme;
-  if (themeAttribute === 'light' || themeAttribute === 'dark') {
-    return themeAttribute;
-  }
-
-  return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  return null;
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const [theme, setTheme] = useState<Theme>('dark');
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    const storedTheme = getStoredTheme();
+
+    if (storedTheme && storedTheme !== theme) {
+      setTheme(storedTheme);
+      return;
+    }
+
+    if (!storedTheme) {
+      const systemTheme = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+
+      if (systemTheme !== theme) {
+        setTheme(systemTheme);
+      }
+    }
+  }, []);
+
+  useEffect(() => {
     applyTheme(theme);
     window.localStorage.setItem('theme', theme);
   }, [theme]);

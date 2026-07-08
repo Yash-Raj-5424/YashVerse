@@ -1,10 +1,11 @@
 'use client';
 
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 
 export default function ScrollToContact() {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   useEffect(() => {
     const scrollTo = searchParams.get('scroll');
@@ -15,12 +16,13 @@ export default function ScrollToContact() {
         const element = document.querySelector('#contact');
         if (element) {
           element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          router.replace('/');
         }
       }, 400);
 
       return () => clearTimeout(timer);
     }
-  }, [searchParams]);
+  }, [router, searchParams]);
 
   return null;
 }
