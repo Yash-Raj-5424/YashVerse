@@ -1,13 +1,12 @@
 'use client';
 
 import Link from 'next/link';
-import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Moon, Sun } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 
 export default function Navbar() {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
   const router = useRouter();
   const { theme, toggleTheme } = useTheme();
   const isOnHomePage = pathname === '/';
@@ -20,8 +19,8 @@ export default function Navbar() {
     if (!isOnHomePage) {
       router.push('/');
     } else {
-      if (searchParams.get('scroll')) {
-        router.replace('/');
+      if (typeof window !== 'undefined' && window.location.search.includes('scroll=')) {
+        window.history.replaceState(null, '', '/');
       }
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
