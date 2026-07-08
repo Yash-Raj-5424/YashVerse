@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import Container from './Container';
+import { useTheme } from './ThemeProvider';
 
 const GitHubCalendar = dynamic(() => import('react-github-calendar').then(m => m.default), {
   loading: () => <div className="text-dark-muted text-center py-8">Loading contribution graph...</div>,
@@ -9,6 +10,8 @@ const GitHubCalendar = dynamic(() => import('react-github-calendar').then(m => m
 });
 
 export default function GitHubActivity() {
+  const { theme } = useTheme();
+
   return (
     <section className="py-16 md:py-20">
       <Container>
@@ -19,7 +22,7 @@ export default function GitHubActivity() {
           <div className="flex justify-center w-full github-activity-calendar-wrap">
             <GitHubCalendar
               username="Yash-Raj-5424"
-              colorScheme="dark"
+              colorScheme={theme}
               fontSize={14}
               style={{ width: '100%' }}
             />

@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import Navbar from '@/components/Navbar';
+import { ThemeProvider } from '@/components/ThemeProvider';
 import './globals.css';
 
 export const viewport: Viewport = {
@@ -18,10 +19,32 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning data-theme="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (() => {
+                try {
+                  const storedTheme = localStorage.getItem('theme');
+                  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+                  const theme = storedTheme === 'light' || storedTheme === 'dark'
+                    ? storedTheme
+                    : (prefersLight ? 'light' : 'dark');
+
+                  document.documentElement.dataset.theme = theme;
+                  document.documentElement.style.colorScheme = theme;
+                } catch (error) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="bg-dark-bg text-dark-text">
-        <Navbar />
-        {children}
+        <ThemeProvider>
+          <Navbar />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
