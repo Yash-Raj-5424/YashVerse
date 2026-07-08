@@ -60,9 +60,9 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 backdrop-blur-md bg-black/30 border border-dark-border rounded-full">
-      <div className="px-8 py-3">
-        <ul className="flex items-center gap-8">
+    <nav className="fixed top-2 sm:top-4 left-1/2 transform -translate-x-1/2 z-50 w-[calc(100vw-1rem)] max-w-[620px] backdrop-blur-md bg-black/30 border border-dark-border rounded-full">
+      <div className="px-3 py-2 sm:px-8 sm:py-3">
+        <ul className="flex items-center justify-between gap-3 sm:gap-8 text-[11px] sm:text-sm whitespace-nowrap">
           <li>
             <a 
               href="/"
@@ -112,12 +112,12 @@ export default function Navbar() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-dark-border bg-dark-bg/40 text-dark-muted transition-colors hover:border-dark-muted hover:text-dark-text"
+              className="inline-flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full border border-dark-border bg-dark-bg/40 text-dark-muted transition-colors hover:border-dark-muted hover:text-dark-text flex-shrink-0"
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               aria-pressed={theme === 'light'}
               title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
             >
-              {theme === 'dark' ? <Sun size={16} strokeWidth={2} /> : <Moon size={16} strokeWidth={2} />}
+              {theme === 'dark' ? <Sun size={14} strokeWidth={2} /> : <Moon size={14} strokeWidth={2} />}
             </button>
           </li>
         </ul>
