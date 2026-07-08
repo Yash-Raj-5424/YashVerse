@@ -78,3 +78,19 @@ a:hover {
   scrollbar-width: auto;
   scrollbar-color: #4b5563 #1a1a1a;
 }
+
+.github-activity-calendar-wrap .react-activity-calendar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.github-activity-calendar-wrap .react-activity-calendar__scroll-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.github-activity-calendar-wrap .react-activity-calendar__calendar {
+  width: 100%;
+  height: auto;
+}
