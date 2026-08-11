@@ -5,20 +5,6 @@ import ProjectCard from './ProjectCard';
 
 const allProjects = [
   {
-    title: 'Outbox - Fault Tolerant Payment Processing System',
-    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Flyway'],
-    description:
-      'Implemented an outbox pattern-based payment processing system ensuring exactly-once delivery semantics. Handles 50K+ transactions daily with automatic retry logic and dead-letter queue for failed payments. Achieves 99.99% reliability with comprehensive audit trails.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
-  },
-  {
-    title: 'FluxWard - Distributed API Rate Limiter',
-    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Lua', 'Resilience4j', 'Prometheus'],
-    description:
-      'Implemented a distributed rate limiter using Redis with token bucket algorithm. Handles 10K+ concurrent requests per second with <5ms latency per check. Integrated across microservices to prevent abuse and ensure SLA compliance.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/FluxWard', // User to update with actual GitHub URL
-  },
-  {
     title: 'Notifyr - Bulk Notification Platform',
     techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'Redis', 'Docker'],
     description:
@@ -26,11 +12,25 @@ const allProjects = [
     githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', // User to update with actual GitHub URL
   },
   {
-    title: 'TinyLynk - URL shortener service',
-    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Docker'],
+    title: 'Outbox',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Flyway', 'ShedLock', 'Testcontainers', 'Docker'],
     description:
-      'Built a high-performance URL shortening service handling millions of redirects daily. Implements custom alphabet encoding for compact URLs with collision detection. Caches hot URLs in Redis achieving sub-millisecond redirect latency with 99.9% uptime.',
+      'A backend payment system built to handle failures, duplicate requests, and concurrent transactions using the Transactional Outbox Pattern, Redis Lua scripting, database-level idempotency, retry + DLQ, and distributed scheduling with ShedLock.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
+  },
+  {
+    title: 'TinyLynk — URL Shortener',
+    techStack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Redis', 'Kafka', 'Docker'],
+    description:
+      'A Spring Boot URL-shortening service with Base62 short codes, Redis caching, and Kafka-based asynchronous click tracking. Supports URL expiry, soft deactivation, validation, and click statistics.',
     githubUrl: 'https://github.com/Yash-Raj-5424/TinyLynk', // User to update with actual GitHub URL
+  },
+  {
+    title: 'gRPC Chat App',
+    techStack: ['Java', 'gRPC', 'Protocol Buffers', 'Maven'],
+    description:
+      'A real-time terminal chat application using gRPC bidirectional streaming, supporting multi-client messaging, private messages, and multiple chat rooms with thread-safe client and room management.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/grpc-chat-app', // User to update with actual GitHub URL
   },
 ];
 

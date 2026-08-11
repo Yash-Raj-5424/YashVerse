@@ -6,18 +6,18 @@ import ProjectCard from './ProjectCard';
 
 const featuredProjects = [
   {
-    title: 'Outbox - Fault Tolerant Payment Processing System',
-    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Flyway'],
-    description:
-      'Implemented an outbox pattern-based payment processing system ensuring exactly-once delivery semantics. Handles 50K+ transactions daily with automatic retry logic and dead-letter queue.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
-  },
-  {
     title: 'Notifyr - Bulk Notification Platform',
     techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'Redis', 'Docker'],
     description:
       'An async, fault-tolerant notification platform with RabbitMQ delivery, retry/DLQ handling, real email and SMS sending, campaign-based bulk messaging, and observability via Prometheus and Grafana.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', // User to update with actual GitHub URL
+    githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', 
+  },
+  {
+    title: 'Outbox',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Flyway', 'ShedLock', 'Testcontainers', 'Docker'],
+    description:
+      'A backend payment system built to handle failures, duplicate requests, and concurrent transactions using the Transactional Outbox Pattern, Redis Lua scripting, database-level idempotency, retry + DLQ, and distributed scheduling with ShedLock.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/outbox', 
   },
 ];
 
