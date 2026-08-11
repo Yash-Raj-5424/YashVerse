@@ -13,11 +13,11 @@ const featuredProjects = [
     githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
   },
   {
-    title: 'FluxWard - Distributed API Rate Limiter',
-    techStack: ['Spring Boot', 'Postgres', 'Redis', 'Lua', 'Resilience4j', 'Prometheus'],
+    title: 'Notifyr - Bulk Notification Platform',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'Redis', 'Docker'],
     description:
-      'Implemented a distributed rate limiter using Redis with token bucket algorithm. Handles 10K+ concurrent requests per second with <5ms latency per check.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/FluxWard', // User to update with actual GitHub URL
+      'An async, fault-tolerant notification platform with RabbitMQ delivery, retry/DLQ handling, real email and SMS sending, campaign-based bulk messaging, and observability via Prometheus and Grafana.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', // User to update with actual GitHub URL
   },
 ];
 

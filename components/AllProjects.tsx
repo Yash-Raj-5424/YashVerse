@@ -19,11 +19,11 @@ const allProjects = [
     githubUrl: 'https://github.com/Yash-Raj-5424/FluxWard', // User to update with actual GitHub URL
   },
   {
-    title: 'kalmeQ - A message queue like Kafka',
-    techStack: ['Java', 'Zookeeper', 'Docker', 'Spring Boot'],
+    title: 'Notifyr - Bulk Notification Platform',
+    techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'RabbitMQ', 'Redis', 'Docker'],
     description:
-      'Built a distributed message queue system inspired by Kafka architecture. Supports pub-sub messaging with partition-based ordering guarantees. Handles 100K+ messages per second with persistent storage and consumer group management.',
-    githubUrl: 'https://github.com/Yash-Raj-5424/kalmeQ', // User to update with actual GitHub URL
+      'Built an async, fault-tolerant notification platform with RabbitMQ-based delivery, retry and DLQ handling, real email and SMS delivery, campaign-based bulk sending, dynamic audience segmentation, and Prometheus/Grafana observability.',
+    githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', // User to update with actual GitHub URL
   },
   {
     title: 'TinyLynk - URL shortener service',
