@@ -13,7 +13,7 @@ const featuredProjects = [
     githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', 
   },
   {
-    title: 'Outbox',
+    title: 'Outbox - Payment Processing System',
     techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Flyway', 'ShedLock', 'Testcontainers', 'Docker'],
     description:
       'A backend payment system built to handle failures, duplicate requests, and concurrent transactions using the Transactional Outbox Pattern, Redis Lua scripting, database-level idempotency, retry + DLQ, and distributed scheduling with ShedLock.',

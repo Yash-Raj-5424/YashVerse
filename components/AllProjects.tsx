@@ -12,14 +12,14 @@ const allProjects = [
     githubUrl: 'https://github.com/Yash-Raj-5424/Notifyr', // User to update with actual GitHub URL
   },
   {
-    title: 'Outbox',
+    title: 'Outbox - Payment Processing System',
     techStack: ['Java', 'Spring Boot', 'PostgreSQL', 'Redis', 'Flyway', 'ShedLock', 'Testcontainers', 'Docker'],
     description:
       'A backend payment system built to handle failures, duplicate requests, and concurrent transactions using the Transactional Outbox Pattern, Redis Lua scripting, database-level idempotency, retry + DLQ, and distributed scheduling with ShedLock.',
     githubUrl: 'https://github.com/Yash-Raj-5424/outbox', // User to update with actual GitHub URL
   },
   {
-    title: 'TinyLynk — URL Shortener',
+    title: 'TinyLynk - URL Shortener',
     techStack: ['Java 21', 'Spring Boot', 'PostgreSQL', 'Redis', 'Kafka', 'Docker'],
     description:
       'A Spring Boot URL-shortening service with Base62 short codes, Redis caching, and Kafka-based asynchronous click tracking. Supports URL expiry, soft deactivation, validation, and click statistics.',

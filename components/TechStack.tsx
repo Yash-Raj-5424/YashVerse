@@ -22,6 +22,7 @@ const skills = [
   { name: 'MySQL', Icon: Database },
   { name: 'Redis', Icon: Zap },
   { name: 'Kafka', Icon: Zap },
+  { name: 'RabbitMQ', Icon: Zap },
   { name: 'Docker', Icon: Package },
   { name: 'Git', Icon: GitBranch },
   { name: 'GitHub', Icon: Github },
